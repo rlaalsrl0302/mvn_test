@@ -4,7 +4,7 @@
 
   <groupId>org.example</groupId>
   <artifactId>my-first-mvn</artifactId>
-  <version>1.0.0</version>
+  <version>1.0</version>
   <packaging>jar</packaging>
 
   <name>my-first-mvn</name>
@@ -29,4 +29,21 @@
 <!--    </dependency>-->
 
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>org.example.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
